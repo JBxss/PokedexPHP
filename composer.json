@@ -1,0 +1,17 @@
+{
+    "name": "jbxss/poke-api",
+    "description": "Proyecto de prueba para consumir una API",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jbxss\\PokeApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JBxss",
+            "email": "juanseb100@gmail.com"
+        }
+    ],
+    "require": {}
+}
