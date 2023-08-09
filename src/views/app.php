@@ -19,8 +19,7 @@ function mostrarPokemon() {
              $pokemon_data = json_decode($response, true);
              // Store all pokemon results in a variable
 
-             echo "<h1>" . $pokemon_data["name"] . "</h1>";
-             echo "<img src=" . $pokemon_data["sprites"]["front_default"] . ">";
+             return "<img src=" . $pokemon_data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']. ">";
          }
 
 }

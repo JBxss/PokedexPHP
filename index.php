@@ -16,21 +16,9 @@ require 'src/views/app.php';
 </head>
 
 <body>
-
     <main>
-
-        <div id="todos">
-            <div>
-
-                <?php
-                    //mostrarPokemon();
-                ?>
-
-            </div>
-        </div>
-
+        <img src="src/img/pokedex.png" alt="pokedex" class="pokedex">
     </main>
-
 </body>
 
 </html>
