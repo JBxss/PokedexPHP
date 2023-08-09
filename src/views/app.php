@@ -1,9 +1,9 @@
 <?php
 
-function mostrarPokemon() {
+function arrayPokemon() {
         // Inicializa una sesion de cURL
          $ch = curl_init();
-         $url = 'https://pokeapi.co/api/v2/pokemon/ditto';
+         $url = 'https://pokeapi.co/api/v2/pokemon/12';
          curl_setopt($ch, CURLOPT_URL, $url);
          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -19,7 +19,7 @@ function mostrarPokemon() {
              $pokemon_data = json_decode($response, true);
              // Store all pokemon results in a variable
 
-             return "<img src=" . $pokemon_data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']. ">";
+             return $pokemon_data;
          }
 
 }
