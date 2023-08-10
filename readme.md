@@ -1,20 +1,17 @@
-# Pokédex en PHP que consume datos de PokeAPI
+# PokédexPHP
 
 Esta es una Pokédex simple desarrollada en PHP que utiliza la PokeAPI para obtener datos sobre diferentes Pokémon. La PokeAPI es una fuente de información abierta y gratuita sobre los Pokémon, lo que hace que sea fácil obtener detalles precisos sobre cada uno de ellos.
 
 ## Funcionalidades
 
-- Lista de Pokémon: Muestra una lista de Pokémon obtenida de la PokeAPI.
+- Lista de Pokémon: Muestra los datos de un Pokémon obtenido de la PokeAPI.
 - Búsqueda: Proporciona la capacidad de buscar Pokémon por nombre o número de Pokédex.
 - Interfaz Amigable: La interfaz web es intuitiva y fácil de usar.
 
 ## Capturas de Pantalla
 
-![Captura de Pantalla 1](screenshots/screenshot1.png)
+![Captura de Pantalla 1](src/img/screenshot.png)
 *Página principal con la lista de Pokémon*
-
-![Captura de Pantalla 2](screenshots/screenshot2.png)
-*Página de detalles de un Pokémon*
 
 ## Requisitos del Sistema
 
@@ -27,26 +24,26 @@ Esta es una Pokédex simple desarrollada en PHP que utiliza la PokeAPI para obte
 1. Clona este repositorio en tu servidor local:
 
    ```
-   git clone https://github.com/JBxss
+   git clone https://github.com/JBxss/PokedexPHP
    ```
 
 2. Navega a la carpeta del proyecto:
 
    ```
-   cd pokedex-php
+   cd pokedexphp
    ```
 
-3. Abre el archivo `config.php` y asegúrate de que la URL de la PokeAPI sea correcta.
+3. Abre el archivo `app.php` y asegúrate de que la URL de la PokeAPI sea correcta.
 
 4. Inicia tu servidor web y asegúrate de que PHP esté habilitado.
 
 5. Accede al proyecto desde tu navegador:
 
    ```
-   http://localhost/pokedex-php
+   http://localhost/pokedexphp
    ```
 
-6. Explora la lista de Pokémon, busca y disfruta de los detalles de cada uno.
+6. Explora la Pokedex, busca y disfruta de los detalles de cada uno.
 
 ## Contribuciones
 

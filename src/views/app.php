@@ -1,31 +1,21 @@
 <?php
-
 session_start();
 
-function obtenerID() {
-    // ID predeterminada en caso de que no se pase ninguna desde el formulario
+function obtenerID()
+{
 
-    if (isset($_SESSION['idPredeterminada'])) {
-        $idPredeterminada = $_SESSION['idPredeterminada'];
-    } else {
-        $idPredeterminada = 1;
-    }
-
-    
+    $idPredeterminada = 1;
     $idFromForm = $_POST['search'];
 
     if (isset($_POST['prev'])) {
         if ($idPredeterminada > 1) {
-            $idPredeterminada -= 1;
+            $idPredeterminada--;
+            $_SESSION['idPredeterminada'] = $idPredeterminada;
         }
-    }
-    
-    if (isset($_POST['next'])) {
-        $idPredeterminada += 1;
-    }
-
-        // Almacenar el valor actualizado en la sesión
+    } elseif (isset($_POST['next'])) {
+        $idPredeterminada++;
         $_SESSION['idPredeterminada'] = $idPredeterminada;
+    }
 
     // Verificar si se proporcionó una ID desde el formulario
     if (!empty($idFromForm)) {
@@ -40,7 +30,7 @@ function arrayPokemon()
     // Inicializa una sesion de cURL
     $ch = curl_init();
     $url = "https://pokeapi.co/api/v2/pokemon/";
-    $pokemon = $url.obtenerID();
+    $pokemon = $url . obtenerID();
     curl_setopt($ch, CURLOPT_URL, $pokemon);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
