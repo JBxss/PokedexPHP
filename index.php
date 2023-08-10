@@ -1,6 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 require 'src/views/app.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ require 'src/views/app.php';
 
 <body>
     <main>
-        
+
         <img src="<?php echo arrayPokemon()['sprites']['front_default']; ?>" alt="pokemon" class="pokemon__image">
 
         <h1 class="pokemon__data">
@@ -25,14 +26,16 @@ require 'src/views/app.php';
             <span class="pokemon__name"><?php echo arrayPokemon()['name']; ?></span>
         </h1>
 
-        <form class="form">
-            <input type="search" class="input__search" placeholder="Name or Number" required />
+        <form class="form" method="post">
+            <input type="search" class="input__search" placeholder="Name or Number" name="search" required />
         </form>
 
-        <div class="buttons">
-            <button class="button btn-prev">&lt; Prev</button>
-            <button class="button btn-next">Next &gt;</button>
-        </div>
+        <form method="post">
+            <div class="buttons">
+                <button class="button btn-prev" name="prev">&lt; Prev</button>
+                <button class="button btn-next" name="next">Next &gt;</button>
+            </div>
+        </form>
 
         <img src="src/img/pokedex.png" alt="pokedex" class="pokedex">
     </main>
